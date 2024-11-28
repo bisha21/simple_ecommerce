@@ -25,12 +25,11 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    // origin: "http://localhost:5173",
-
-    origin: "http://localhost:5000",
+    origin: "*", // For open access, or specify your production frontend URL here
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
+
 
 
 const PORT = process.env.PORT;
