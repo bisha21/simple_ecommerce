@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const connectDB = async () => {
-  const MONGODB_URI = "mongodb+srv://bishal:bishal123@cluster0.bqsd4.mongodb.net/nodejs-2026823?retryWrites=true&w=majority&appName=Cluster0"
+  const MONGODB_URI = process.env.MONGODB_URI
 
   try {
     await mongoose.connect(`${MONGODB_URI}`);

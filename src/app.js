@@ -37,7 +37,7 @@ const PORT = process.env.PORT;
 app.get("/", (req, res) => {
   // JSON => JavaScript Object Notation
   res.json({
-    appName: "nodejs-20240823",
+    appName: "nodejs",
     version: process.env.VERSION,
     port: PORT,
   });
