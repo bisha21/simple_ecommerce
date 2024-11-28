@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "The times",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, delectus."
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Jungle book",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, delectus."
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "title": "Times square",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, delectus."
+    }
+  ]

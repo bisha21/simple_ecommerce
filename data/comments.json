@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "postId": 1,
+      "comment": "Commodi dignissimos quia nostrum ducimus consequuntur non consequatur unde eaque repellat quis."
+    },
+    {
+      "id": 2,
+      "postId": 2,
+      "comment": "ducimus consequuntur non consequatur unde eaque repellat quis."
+    },
+    {
+      "id": 3,
+      "postId": 2,
+      "comment": "amet consectetur adipisicing elit. Commodi dignissimos quia nostrum ducimus consequuntur non"
+    }
+  ]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Samsung Galaxy s24",
+    "price": 2000,
+    "category": "Smartphones",
+    "brand": "Samsung",
+    "createdAt": "Jun 23, 2024"
+  },
+  {
+    "id": "2",
+    "name": "samsung f22",
+    "price": 231,
+    "category": "Smartphones",
+    "brand": "Samsung",
+    "createdAt": "Aug 25, 2024"
+  },
+  {
+    "id": "3",
+    "name": "redmi",
+    "price": 23,
+    "category": "Smartphones",
+    "brand": "Samsung",
+    "createdAt": "Aug 25, 2024"
+  },
+  {
+    "id": "4",
+    "name": "redmi 9 ",
+    "price": 236,
+    "category": "Smartphones",
+    "brand": "Samsung",
+    "createdAt": "Aug 25, 2024"
+  },
+  {
+    "id": "5",
+    "name": "Denen stebilizer",
+    "price": 403,
+    "category": "Electronic",
+    "brand": "no bran",
+    "createdAt": "Aug 25, 2024"
+  },
+ 
+  
+  {
+    "id": "7",
+    "name": "Denen sr",
+    "price": 403,
+    "category": "Electronic",
+    "brand": "no bran",
+    "createdAt": "Aug 25, 2024"
+  }
+]
