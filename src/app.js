@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
   res.json({
     appName: "nodejs-20240823",
     version: process.env.VERSION,
-    port: PORT,
+    port: 3000
   });
 });
 
