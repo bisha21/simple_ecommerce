@@ -17,7 +17,10 @@ const getAllProducts = async (query) => {
 };
 
 const getProductById = async (id) => {
-  return await Product.findById(id);
+  return await Product.findById(id).populate({
+    path: 'reviews',
+    select: 'review rating ', // Include only the desired fields
+})
 };
 
 const createProduct = async (data, userId) => {

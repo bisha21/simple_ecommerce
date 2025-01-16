@@ -4,6 +4,33 @@ import Order from "../models/Order.js";
 const createOrder = async (data) => {
   return await Order.create(data);
 };
+const getAllOrder = async (days) => {
+  const day = parseInt(days, 10) || 7; // Ensure days is a valid integer, default to 7
+  console.log("Services order", day);
+
+  const date = new Date();
+  // Calculate the start date for the number of days specified
+  const startDate = new Date(date.getTime() - day * 24 * 60 * 60 * 1000); // Convert days to milliseconds
+
+  console.log("HI", startDate);
+
+  try {
+    // If 'days' is provided, show orders from the last 'n' days. If not, default to 7 days.
+    const query = { purchasedAt: { $gte: startDate } };  // Use `$gte` to get orders from the past 'n' days
+    return await Order.find(query)
+      .populate({
+        path: "productId",
+        select: "name price",
+      })
+      .populate({
+        path: "userId",
+        select: "name",
+      });
+  } catch (error) {
+    throw new Error("Error fetching orders: " + error.message); // Throw error for the controller to handle
+  }
+};
+
 
 const getAllOrdersByUser = async (userId) => {
   const result = await Order.aggregate([
@@ -43,6 +70,7 @@ const getStatus = async () => {
 
 const updateOrder = async (id, data) => {
   return await Order.findByIdAndUpdate(id, data);
+
 
 }
 
@@ -86,5 +114,5 @@ const getTotalAmountByStatus = async () => {
 
 
 
-export default { createOrder, getAllOrdersByUser, getStatus, getOrderById, updateOrder, getTotalAmountByStatus };
+export default { createOrder, getAllOrdersByUser, getStatus, getOrderById, updateOrder, getTotalAmountByStatus, getAllOrder };
 

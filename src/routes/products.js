@@ -10,6 +10,7 @@ import {
 } from "../controllers/productController.js";
 import auth from "../middlewares/auth.js";
 import roleBasedAuth from "../middlewares/roleBasedAuth.js";
+import reviewRoutes from './reviewRoutes.js';
 
 const router = express.Router();
 
@@ -19,6 +20,7 @@ const router = express.Router();
  * Get all product categories
  * No authentication or authorization required
  */
+router.use('/:productId/reviews',reviewRoutes)
 router.get("/categories", getCategories);
 router.get("/totalProducts",getTotalProducts);
 

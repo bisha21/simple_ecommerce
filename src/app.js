@@ -4,6 +4,7 @@ import express from "express";
 import products from "./routes/products.js";
 import auth from "./routes/auth.js";
 import order from "./routes/order.js";
+import review from "./routes/reviewRoutes.js";
 import authMiddleware from "./middlewares/auth.js";
 import connectDB from "./database.js";
 import cookieParser from "cookie-parser";
@@ -16,7 +17,13 @@ dotenv.config();
 
 connectDB();
 
-app.use(bodyParser.json());
+app.use((req, res, next) => {
+  if (['POST', 'PUT', 'PATCH'].includes(req.method)) {
+      bodyParser.json()(req, res, next);
+  } else {
+      next();
+  }
+});
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set("view engine", "ejs");
@@ -46,6 +53,7 @@ app.get("/", (req, res) => {
 app.use("/api/products", products);
 app.use("/api/auth", auth);
 app.use("/api/order", order);
+app.use("/api/review", review);
 
 app.listen(PORT, () => {
   console.log(`Server running at port ${PORT}...`);

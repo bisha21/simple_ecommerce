@@ -63,5 +63,9 @@ const deleteUser = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+const logout = (req, res) => {
+  res.clearCookie("authToken");
+  res.send("Logged out successfully");
+};
 
-export { register, login ,getAllUser,deleteUser};
+export { register, login ,getAllUser,deleteUser,logout};
