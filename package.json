@@ -7,8 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
-    "vercel-build": "react-scripts build"
+    "dev": "nodemon src/app.js"
   },
   "author": "Bishal Timilsina",
   "license": "ISC",
@@ -22,7 +21,6 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.0",
-    "react-scripts": "^5.0.1",
     "stripe": "^17.5.0"
   },
   "devDependencies": {
