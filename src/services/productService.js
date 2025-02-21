@@ -6,10 +6,8 @@ const getAllProducts = async (query) => {
   const filters = query?.filters ? JSON.parse(query.filters) : {};
   const page = query?.page || 1;
   const offset = (page - 1) * limit;
-
   const customQuery = Object.entries(filters).reduce((acc, [key, value]) => {
     const result = { ...acc, [key]: new RegExp(value, "i") };
-
     return result;
   }, {});
 
@@ -20,7 +18,7 @@ const getProductById = async (id) => {
   return await Product.findById(id).populate({
     path: 'reviews',
     select: 'review rating ', // Include only the desired fields
-})
+  })
 };
 
 const createProduct = async (data, userId) => {

@@ -10,6 +10,7 @@ import connectDB from "./database.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import productService from "./services/productService.js";
+import payment from './routes/paymentRoutes.js'
 
 const app = express();
 
@@ -54,6 +55,7 @@ app.use("/api/products", products);
 app.use("/api/auth", auth);
 app.use("/api/order", order);
 app.use("/api/review", review);
+app.use("/api/payment", payment);
 
 app.listen(PORT, () => {
   console.log(`Server running at port ${PORT}...`);

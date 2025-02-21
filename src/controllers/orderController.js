@@ -13,8 +13,7 @@ const createOrder = async (req, res) => {
   try {
 
     const order = await orderServices.createOrder({ userId: user.id, ...input });
-    console.log("Order",order);
-    res.status(201).json(order);
+    res.status(201).json({order, ...input,orderId: order._id});
 
   }
   catch (error) {
